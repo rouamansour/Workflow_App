@@ -27,7 +27,7 @@ namespace Data
 
                 entity.HasKey(e => new { e.UserId, e.RequestId });
 
-                entity.ToTable("User_Request");
+                entity.ToTable("UserRequest");
 
                 entity.HasOne(r => r.Request)
                       .WithMany(u => u.UserRequests)
