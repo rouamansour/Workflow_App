@@ -14,5 +14,9 @@ namespace Data.Models
         public string Title { get; set; }
         public DateTime Deadline { get; set; }
         public TypeRequest TypeRequest { get; internal set; }
+        // public UserRequest UserRequests { get; internal set; }
+        public List<UserRequest> UserRequests { get; set; }
+        public ICollection<User> Users { get; set; }
+
     }
 }

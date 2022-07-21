@@ -22,20 +22,26 @@ namespace Data
                 modelBuilder.Entity<User>()
                             .HasOne(u => u.Position)
                             .WithMany(p=> p.Users);
+            modelBuilder.Entity<UserRequest>(entity =>
+            {
 
-                //modelBuilder.Entity<UserRequest>()(e => new { e.RequestId, e.UserId });
+                entity.HasKey(e => new { e.UserId, e.RequestId });
 
-                //modelBuilder.Entity.ToTable("User");
+                entity.ToTable("User_Request");
 
-                //modelBuilder.Entity.HasOne(d => d.Request)
-                //            .WithMany(p => p.User)
-                //            .HasForeignKey(d => d.RequestId)
-                //            .HasConstraintName("FK_Request_User");
+                entity.HasOne(r => r.Request)
+                      .WithMany(u => u.UserRequests)
+                      .HasForeignKey(r => r.RequestId)
+                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .HasConstraintName("FK_Request_User");
 
-                //modelBuilder.Entity.HasOne(d => d.User)
-                //            .WithMany(p => p.User)
-                //            .HasForeignKey(d => d.UserId)
-                //            .HasConstraintName("FK_UserRequest");
+                entity.HasOne(r => r.User)
+                      .WithMany(u => u.UserRequests)
+                      .HasForeignKey(r => r.UserId)
+                      .OnDelete(DeleteBehavior.ClientSetNull)
+                      .HasConstraintName("FK_UserRequest");
+
+            });
 
         }
     }
