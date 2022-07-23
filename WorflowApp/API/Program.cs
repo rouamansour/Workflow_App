@@ -10,6 +10,7 @@ builder.Services.AddDbContext<WorkflowDbContext>(options =>
 
 builder.Services.AddScoped<IRequestService, RequestService>();
 builder.Services.AddScoped<ITypeRequestService, TypeRequestService>();
+builder.Services.AddScoped<IPositionService, PositionService>();
 
 // Add services to the container.
 

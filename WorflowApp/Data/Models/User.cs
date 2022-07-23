@@ -14,6 +14,7 @@ namespace Data.Models
         public string Address { get; set; }
         public string Email { get; set; }
         public Position Position { get; internal set; }
+        public int PositionId { get; set; }
         //public UserRequest UserRequests { get; internal set; }
         public List<UserRequest> UserRequests { get; set; }
         public ICollection<Request> Requests { get; set; }
