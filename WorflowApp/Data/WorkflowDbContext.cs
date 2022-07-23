@@ -15,33 +15,36 @@ namespace Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+                // one to many relation : Request/TypeRequest
                 modelBuilder.Entity<Request>()
                             .HasOne(r => r.TypeRequest)
                             .WithMany(t=> t.Requests);
-
+                // one to many relation : User/Position
                 modelBuilder.Entity<User>()
                             .HasOne(u => u.Position)
                             .WithMany(p=> p.Users);
-            modelBuilder.Entity<UserRequest>(entity =>
-            {
+                // one to many relation : 
+                // many to many : Request/User --> UserRequest
+                modelBuilder.Entity<UserRequest>(entity =>
+                {
 
-                entity.HasKey(e => new { e.UserId, e.RequestId });
+                    entity.HasKey(e => new { e.UserId, e.RequestId });
 
-                entity.ToTable("UserRequest");
+                    entity.ToTable("UserRequest");
 
-                entity.HasOne(r => r.Request)
-                      .WithMany(u => u.UserRequests)
-                      .HasForeignKey(r => r.RequestId)
-                      .OnDelete(DeleteBehavior.ClientSetNull)
-                      .HasConstraintName("FK_Request_User");
+                    entity.HasOne(r => r.Request)
+                          .WithMany(u => u.UserRequests)
+                          .HasForeignKey(r => r.RequestId)
+                          .OnDelete(DeleteBehavior.ClientSetNull)
+                          .HasConstraintName("FK_Request_User");
 
-                entity.HasOne(r => r.User)
-                      .WithMany(u => u.UserRequests)
-                      .HasForeignKey(r => r.UserId)
-                      .OnDelete(DeleteBehavior.ClientSetNull)
-                      .HasConstraintName("FK_UserRequest");
+                    entity.HasOne(r => r.User)
+                          .WithMany(u => u.UserRequests)
+                          .HasForeignKey(r => r.UserId)
+                          .OnDelete(DeleteBehavior.ClientSetNull)
+                          .HasConstraintName("FK_UserRequest");
 
-            });
+                });
 
         }
     }
