@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{07A0BFB6-B2A6-48AB-91CF-3DAAFDCA8D62}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{7422CDA5-DD42-45E6-9A33-50CE570CBA77}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL", "BLL\BLL.csproj", "{E8DAEB1C-77F2-4E65-98D6-D61AB14772B1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF827E81-DFDF-4B0F-9064-DF75DFE86F29}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow.API", "..\..\Workflow_App1\WorflowApp\API\Workflow.API.csproj", "{D9CF92F7-9576-4D79-8003-F5813DF22544}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow.BLL", "..\..\Workflow_App1\WorflowApp\BLL\Workflow.BLL.csproj", "{4D8CCEAD-488E-479D-8592-BA884521E318}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Workflow.Data", "..\..\Workflow_App1\WorflowApp\Data\Workflow.Data.csproj", "{FFF6D490-940F-40DA-9C71-59378EF4F182}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,18 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{07A0BFB6-B2A6-48AB-91CF-3DAAFDCA8D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{07A0BFB6-B2A6-48AB-91CF-3DAAFDCA8D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{07A0BFB6-B2A6-48AB-91CF-3DAAFDCA8D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{07A0BFB6-B2A6-48AB-91CF-3DAAFDCA8D62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7422CDA5-DD42-45E6-9A33-50CE570CBA77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7422CDA5-DD42-45E6-9A33-50CE570CBA77}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7422CDA5-DD42-45E6-9A33-50CE570CBA77}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7422CDA5-DD42-45E6-9A33-50CE570CBA77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8DAEB1C-77F2-4E65-98D6-D61AB14772B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8DAEB1C-77F2-4E65-98D6-D61AB14772B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8DAEB1C-77F2-4E65-98D6-D61AB14772B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8DAEB1C-77F2-4E65-98D6-D61AB14772B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9CF92F7-9576-4D79-8003-F5813DF22544}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9CF92F7-9576-4D79-8003-F5813DF22544}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9CF92F7-9576-4D79-8003-F5813DF22544}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9CF92F7-9576-4D79-8003-F5813DF22544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8CCEAD-488E-479D-8592-BA884521E318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8CCEAD-488E-479D-8592-BA884521E318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8CCEAD-488E-479D-8592-BA884521E318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8CCEAD-488E-479D-8592-BA884521E318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFF6D490-940F-40DA-9C71-59378EF4F182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFF6D490-940F-40DA-9C71-59378EF4F182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFF6D490-940F-40DA-9C71-59378EF4F182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFF6D490-940F-40DA-9C71-59378EF4F182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
